@@ -4,7 +4,6 @@ import (
 	"errors"
 	"net/http"
 
-	//"errors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -126,6 +125,6 @@ func main() {
 	router.GET("/books/:id", bookById)
 	router.POST("/books", createBook)
 	router.PATCH("/checkout", checkoutBook)
-	router.PATCH("/return", returnBook)
+	router.PUT("/return", returnBook)
 	router.Run("localhost:8080")
 }
